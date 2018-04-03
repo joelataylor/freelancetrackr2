@@ -1,8 +1,39 @@
 <template>
-  <div>
+  <div class="flex h-screen">
+    <nav class="flex flex-col items-center w-16 lg:w-48 pt-4 lg:pt-0 bg-blue text-blue-light text-left">
+      <Avatar />
+
+      <div class="flex flex-col w-full mt-4">
+
+        <NavItem href="/projects" icon="fa-server">Projects</NavItem>
+        <NavItem href="/invoices" icon="fa-leaf">Invoices</NavItem>
+        <NavItem href="/clients" icon="fa-graduation-cap">Clients</NavItem>
+        <NavItem href="/reports" icon="fa-chart-bar">Reports</NavItem>
+        <NavItem href="/settings" icon="fa-cogs">Settings</NavItem>
+
+        <Logo />
+
+      </div>
+    </nav>
+
     <nuxt/>
   </div>
 </template>
+
+<script>
+import Avatar from '@/components/Avatar'
+import NavItem from '@/components/NavItem'
+import Logo from '@/components/Logo'
+
+export default {
+  components: {
+    Avatar,
+    Logo,
+    NavItem
+  }
+}
+</script>
+
 
 <style>
 html
