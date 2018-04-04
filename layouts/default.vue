@@ -51,6 +51,7 @@ html
 {
   box-sizing: border-box;
   margin: 0;
+  transition: all 0.2s ease;
 }
 .button--green
 {
